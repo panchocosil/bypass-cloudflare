@@ -18,7 +18,7 @@ with open(args.hosts) as hosts_file:
 
 for host in hosts:
     for ip in ips:
-        cmd = f'curl -i -s -k -X $\'GET\' -H $\'Host: {host}\' -H $\'User-Agent: Mozilla/5.0\' $\'https://{ip}/?malicioso=../../../etc/passwd\''
+        cmd = f'curl --max-time 5 -i -s -k -X $\'GET\' -H $\'Host: {host}\' -H $\'User-Agent: Mozilla/5.0\' $\'https://{ip}/?malicioso=../../../etc/passwd\''
         result = subprocess.run(cmd, shell=True, capture_output=True)
 
         if result.returncode != 0:
