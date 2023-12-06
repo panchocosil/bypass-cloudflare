@@ -10,4 +10,4 @@ python3 bypass-cloudflare.py -H hosts-file.txt -ip ips-file.txt
 
 *bypass-waf.py:*
 
-python3 bypass-cloudflare.py -d example.com -ip IPs.txt -match "Login Page"
+python3 bypass-waf.py -d example.com -ip IPs.txt -match "Login Page"
