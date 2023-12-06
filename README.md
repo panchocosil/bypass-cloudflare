@@ -5,7 +5,9 @@ To obtain the IPs, the script can make use of resources like https://search.cens
 The usage of the script is as follows: 
 
 bypass-cloudflare.py:
+
 python3 bypass-cloudflare.py -H hosts-file.txt -ip ips-file.txt
 
-bypass-waf.py
+bypass-waf.py:
+
 python3 bypass-cloudflare.py -d example.com -ip IPs.txt -match "Login Page"
